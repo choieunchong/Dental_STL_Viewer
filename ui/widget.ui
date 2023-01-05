@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <widget class="QListView" name="Patient_listView">
+  <widget class="QListView" name="patientlistView">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -53,7 +53,7 @@
    </property>
    <layout class="QGridLayout" name="gridLayout_5">
     <item row="0" column="0">
-     <widget class="QPushButton" name="Patient_New_pushButton">
+     <widget class="QPushButton" name="patientNewpushButton">
       <property name="text">
        <string>New</string>
       </property>
@@ -66,7 +66,7 @@
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QPushButton" name="Patient_Edit_pushButton">
+     <widget class="QPushButton" name="patientEditpushButton">
       <property name="text">
        <string>Edit</string>
       </property>
@@ -79,7 +79,7 @@
      </widget>
     </item>
     <item row="0" column="2">
-     <widget class="QPushButton" name="Patient_Delete_pushButton">
+     <widget class="QPushButton" name="patientDeletepushButton">
       <property name="text">
        <string>Delete</string>
       </property>
@@ -113,7 +113,7 @@
        </widget>
       </item>
       <item row="0" column="1" colspan="5">
-       <widget class="QLineEdit" name="Patient_Mobile_lineEdit"/>
+       <widget class="QLineEdit" name="patientMobilelineEdit"/>
       </item>
       <item row="1" column="0" colspan="2">
        <widget class="QLabel" name="Patlent_phone_label">
@@ -123,7 +123,7 @@
        </widget>
       </item>
       <item row="1" column="2" colspan="4">
-       <widget class="QLineEdit" name="Patient_Phone_lineEdit"/>
+       <widget class="QLineEdit" name="patientPhonelineEdit"/>
       </item>
       <item row="2" column="0" colspan="2">
        <widget class="QLabel" name="Patlent_Email_label">
@@ -133,7 +133,7 @@
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QLineEdit" name="Patient_Email_lineEdit"/>
+       <widget class="QLineEdit" name="patientEmaillineEdit"/>
       </item>
       <item row="2" column="3">
        <widget class="QLabel" name="label_12">
@@ -143,7 +143,7 @@
        </widget>
       </item>
       <item row="2" column="4">
-       <widget class="QLineEdit" name="Patient_Email_lineEdit_2"/>
+       <widget class="QLineEdit" name="patientEmaillineEdit2"/>
       </item>
       <item row="2" column="5">
        <widget class="QComboBox" name="Patient_comboBox">
@@ -171,10 +171,10 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLineEdit" name="Patient_Address_lineEdit"/>
+       <widget class="QLineEdit" name="patientAddresslineEdit"/>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="Patient_DetailAddress_lineEdit"/>
+       <widget class="QLineEdit" name="patientDetailAddresslineEdit"/>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="Patlent_DetailAddress_label">
@@ -198,7 +198,7 @@
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="4" column="1" colspan="3">
-     <widget class="QDateEdit" name="Patient_FirstVist_dateEdit"/>
+     <widget class="QDateEdit" name="patientFirstVistdateEdit"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="Patlent_Gender_label">
@@ -208,10 +208,10 @@
      </widget>
     </item>
     <item row="5" column="1" colspan="3">
-     <widget class="QDateEdit" name="Patient_LastVist_dateEdit"/>
+     <widget class="QDateEdit" name="patientLastVistdateEdit"/>
     </item>
     <item row="3" column="3">
-     <widget class="QPushButton" name="Patient_Gender_None_pushButton">
+     <widget class="QPushButton" name="patientGenderNonepushButton">
       <property name="text">
        <string>None</string>
       </property>
@@ -239,20 +239,20 @@
      </widget>
     </item>
     <item row="3" column="2">
-     <widget class="QPushButton" name="Patient_Gender_Female_pushButton">
+     <widget class="QPushButton" name="patientGenderFemalepushButton">
       <property name="text">
        <string>Female</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1" colspan="3">
-     <widget class="QLineEdit" name="Patient_Birthdat_lineEdit"/>
+     <widget class="QLineEdit" name="patientBirthdatlineEdit"/>
     </item>
     <item row="0" column="1" colspan="3">
-     <widget class="QLineEdit" name="Patient_Name_lineEdit"/>
+     <widget class="QLineEdit" name="patientNamelineEdit"/>
     </item>
     <item row="3" column="1">
-     <widget class="QPushButton" name="Patient_Gender_Male_pushButton">
+     <widget class="QPushButton" name="patientGenderMalepushButton">
       <property name="text">
        <string>Male</string>
       </property>
@@ -279,7 +279,7 @@
      </widget>
     </item>
     <item row="2" column="1" colspan="3">
-     <widget class="QLineEdit" name="Patient_ChartNumber_lineEdit"/>
+     <widget class="QLineEdit" name="patientBirthdatlineEdit_2"/>
     </item>
    </layout>
   </widget>
@@ -319,7 +319,7 @@
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>761</x>
@@ -330,20 +330,20 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QOpenGLWidget" name="Patient_Data_upper_openGLWidget"/>
+     <widget class="QOpenGLWidget" name="patientDataupperopenGLWidget"/>
     </item>
     <item>
-     <widget class="QOpenGLWidget" name="Patient_Data_lower_openGLWidget"/>
+     <widget class="QOpenGLWidget" name="patientDataloweropenGLWidget"/>
     </item>
     <item>
-     <widget class="QOpenGLWidget" name="Patient_Data_occlusion_openGLWidget"/>
+     <widget class="QOpenGLWidget" name="patientDataocclusionopenGLWidget"/>
     </item>
    </layout>
   </widget>
   <zorder>layoutWidget</zorder>
   <zorder>layoutWidget</zorder>
   <zorder>Patient_Data_widget</zorder>
-  <zorder>Patient_listView</zorder>
+  <zorder>patientlistView</zorder>
   <zorder>PatintInfo_label</zorder>
   <zorder>layoutWidget</zorder>
   <zorder>layoutWidget</zorder>
