@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <widget class="QListView" name="Patlent_listView">
+  <widget class="QListView" name="Patient_listView">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -23,7 +23,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_6">
+  <widget class="QLabel" name="PatintInfo_label">
    <property name="geometry">
     <rect>
      <x>770</x>
@@ -53,7 +53,7 @@
    </property>
    <layout class="QGridLayout" name="gridLayout_5">
     <item row="0" column="0">
-     <widget class="QPushButton" name="Patlent_New_pushButton">
+     <widget class="QPushButton" name="Patient_New_pushButton">
       <property name="text">
        <string>New</string>
       </property>
@@ -66,7 +66,7 @@
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QPushButton" name="Patlent_Edit_pushButton">
+     <widget class="QPushButton" name="Patient_Edit_pushButton">
       <property name="text">
        <string>Edit</string>
       </property>
@@ -79,7 +79,7 @@
      </widget>
     </item>
     <item row="0" column="2">
-     <widget class="QPushButton" name="Patlent_Delete_pushButton">
+     <widget class="QPushButton" name="Patient_Delete_pushButton">
       <property name="text">
        <string>Delete</string>
       </property>
@@ -113,7 +113,7 @@
        </widget>
       </item>
       <item row="0" column="1" colspan="5">
-       <widget class="QLineEdit" name="Patlent_Mobile_lineEdit"/>
+       <widget class="QLineEdit" name="Patient_Mobile_lineEdit"/>
       </item>
       <item row="1" column="0" colspan="2">
        <widget class="QLabel" name="Patlent_phone_label">
@@ -123,7 +123,7 @@
        </widget>
       </item>
       <item row="1" column="2" colspan="4">
-       <widget class="QLineEdit" name="Patlent_Phone_lineEdit"/>
+       <widget class="QLineEdit" name="Patient_Phone_lineEdit"/>
       </item>
       <item row="2" column="0" colspan="2">
        <widget class="QLabel" name="Patlent_Email_label">
@@ -133,7 +133,7 @@
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QLineEdit" name="Patlent_Email_lineEdit"/>
+       <widget class="QLineEdit" name="Patient_Email_lineEdit"/>
       </item>
       <item row="2" column="3">
        <widget class="QLabel" name="label_12">
@@ -143,10 +143,10 @@
        </widget>
       </item>
       <item row="2" column="4">
-       <widget class="QLineEdit" name="lineEdit_7"/>
+       <widget class="QLineEdit" name="Patient_Email_lineEdit_2"/>
       </item>
       <item row="2" column="5">
-       <widget class="QComboBox" name="Patlent_comboBox">
+       <widget class="QComboBox" name="Patient_comboBox">
         <item>
          <property name="text">
           <string>naver.com</string>
@@ -171,10 +171,10 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLineEdit" name="Patlent_Address_lineEdit"/>
+       <widget class="QLineEdit" name="Patient_Address_lineEdit"/>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="Patlent_DetailAddress_lineEdit"/>
+       <widget class="QLineEdit" name="Patient_DetailAddress_lineEdit"/>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="Patlent_DetailAddress_label">
@@ -198,7 +198,7 @@
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="4" column="1" colspan="3">
-     <widget class="QDateEdit" name="Patlent_FirstVist_dateEdit"/>
+     <widget class="QDateEdit" name="Patient_FirstVist_dateEdit"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="Patlent_Gender_label">
@@ -208,10 +208,10 @@
      </widget>
     </item>
     <item row="5" column="1" colspan="3">
-     <widget class="QDateEdit" name="Patlent_LastVist_dateEdit"/>
+     <widget class="QDateEdit" name="Patient_LastVist_dateEdit"/>
     </item>
     <item row="3" column="3">
-     <widget class="QPushButton" name="Patlent_Gender_None_pushButton">
+     <widget class="QPushButton" name="Patient_Gender_None_pushButton">
       <property name="text">
        <string>None</string>
       </property>
@@ -239,20 +239,20 @@
      </widget>
     </item>
     <item row="3" column="2">
-     <widget class="QPushButton" name="Patlent_Gender_Female_pushButton">
+     <widget class="QPushButton" name="Patient_Gender_Female_pushButton">
       <property name="text">
        <string>Female</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1" colspan="3">
-     <widget class="QLineEdit" name="Patlent_Birthdat_lineEdit"/>
+     <widget class="QLineEdit" name="Patient_Birthdat_lineEdit"/>
     </item>
     <item row="0" column="1" colspan="3">
-     <widget class="QLineEdit" name="Patlent_Name_lineEdit"/>
+     <widget class="QLineEdit" name="Patient_Name_lineEdit"/>
     </item>
     <item row="3" column="1">
-     <widget class="QPushButton" name="Patlent_Gender_Male_pushButton">
+     <widget class="QPushButton" name="Patient_Gender_Male_pushButton">
       <property name="text">
        <string>Male</string>
       </property>
@@ -279,7 +279,7 @@
      </widget>
     </item>
     <item row="2" column="1" colspan="3">
-     <widget class="QLineEdit" name="Patlent_ChartNumber_lineEdit"/>
+     <widget class="QLineEdit" name="Patient_ChartNumber_lineEdit"/>
     </item>
    </layout>
   </widget>
@@ -296,7 +296,7 @@
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QWidget" name="Patlent_Data_widget" native="true">
+  <widget class="QWidget" name="Patient_Data_widget" native="true">
    <property name="geometry">
     <rect>
      <x>740</x>
@@ -305,7 +305,7 @@
      <height>31</height>
     </rect>
    </property>
-   <widget class="QLabel" name="Patlent_Data_label">
+   <widget class="QLabel" name="Patient_Data_label">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -330,21 +330,21 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QOpenGLWidget" name="Patlent_Data_upper_openGLWidget"/>
+     <widget class="QOpenGLWidget" name="Patient_Data_upper_openGLWidget"/>
     </item>
     <item>
-     <widget class="QOpenGLWidget" name="Patlent_Data_lower_openGLWidget"/>
+     <widget class="QOpenGLWidget" name="Patient_Data_lower_openGLWidget"/>
     </item>
     <item>
-     <widget class="QOpenGLWidget" name="Patlent_Data_occlusion_openGLWidget"/>
+     <widget class="QOpenGLWidget" name="Patient_Data_occlusion_openGLWidget"/>
     </item>
    </layout>
   </widget>
   <zorder>layoutWidget</zorder>
   <zorder>layoutWidget</zorder>
-  <zorder>Patlent_Data_widget</zorder>
-  <zorder>Patlent_listView</zorder>
-  <zorder>label_6</zorder>
+  <zorder>Patient_Data_widget</zorder>
+  <zorder>Patient_listView</zorder>
+  <zorder>PatintInfo_label</zorder>
   <zorder>layoutWidget</zorder>
   <zorder>layoutWidget</zorder>
   <zorder>line</zorder>
