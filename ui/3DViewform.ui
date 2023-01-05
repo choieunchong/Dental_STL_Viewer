@@ -44,49 +44,49 @@
         </layout>
        </item>
        <item>
-        <widget class="QDateEdit" name="View_Expansion_dateEdit"/>
+        <widget class="QDateEdit" name="viewExpansiondateEdit"/>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QPushButton" name="View_Expansion_Save_pushButton">
+        <widget class="QPushButton" name="viewExpansionSavepushButton">
          <property name="text">
           <string>save</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="View_Expansion_Cut_pushButton">
+        <widget class="QPushButton" name="viewExpansionCutpushButton">
          <property name="text">
           <string>cut</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="View_Expansion_Back_pushButton">
+        <widget class="QPushButton" name="viewExpansionBackpushButton">
          <property name="text">
           <string>이전</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="View_Expansion_Return_pushButton">
+        <widget class="QPushButton" name="viewExpansionReturnpushButton">
          <property name="text">
           <string>되돌리기</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="View_Expansion_Color_pushButton">
+        <widget class="QPushButton" name="viewExpansionColorpushButton">
          <property name="text">
           <string>color변경</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="View_Expansion_Refresh_pushButton">
+        <widget class="QPushButton" name="viewExpansionRefreshpushButton">
          <property name="text">
           <string>새로고침</string>
          </property>
@@ -97,7 +97,7 @@
     </layout>
    </item>
    <item row="1" column="0">
-    <widget class="QOpenGLWidget" name="View_Expansion_openGLWidget"/>
+    <widget class="QOpenGLWidget" name="viewExpansionopenGLWidget"/>
    </item>
   </layout>
  </widget>
