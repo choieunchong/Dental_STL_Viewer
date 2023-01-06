@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Nurse</class>
+ <Nurse class="QWidget" name="Nurse">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1763</width>
+    <height>987</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Nurse</string>
+  </property>
+  <Nurse class="QListView" name="listView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>731</width>
+     <height>831</height>
+    </rect>
+   </property>
+  </Nurse>
+  <Nurse class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>10</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Patlent Info</string>
+   </property>
+  </Nurse>
+  <Nurse class="QWidget" name="layoutNurse">
+   <property name="geometry">
+    <rect>
+     <x>1420</x>
+     <y>10</y>
+     <width>295</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0">
+     <Nurse class="QPushButton" name="Patlent_New_pushButton">
+      <property name="text">
+       <string>New</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </Nurse>
+    </item>
+    <item row="0" column="1">
+     <Nurse class="QPushButton" name="Patlent_Edit_pushButton">
+      <property name="text">
+       <string>Edit</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </Nurse>
+    </item>
+    <item row="0" column="2">
+     <Nurse class="QPushButton" name="Patlent_Delete_pushButton">
+      <property name="text">
+       <string>Delete</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </Nurse>
+    </item>
+   </layout>
+  </Nurse>
+  <Nurse class="QWidget" name="layoutNurse">
+   <property name="geometry">
+    <rect>
+     <x>1209</x>
+     <y>50</y>
+     <width>511</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <Nurse class="QLabel" name="Patlent_Mobile_label">
+        <property name="text">
+         <string>Mobile</string>
+        </property>
+       </Nurse>
+      </item>
+      <item row="0" column="1" colspan="5">
+       <Nurse class="QLineEdit" name="Patlent_Mobile_lineEdit"/>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <Nurse class="QLabel" name="Patlent_phone_label">
+        <property name="text">
+         <string>Phone</string>
+        </property>
+       </Nurse>
+      </item>
+      <item row="1" column="2" colspan="4">
+       <Nurse class="QLineEdit" name="Patlent_Phone_lineEdit"/>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <Nurse class="QLabel" name="Patlent_Email_label">
+        <property name="text">
+         <string>E-mail</string>
+        </property>
+       </Nurse>
+      </item>
+      <item row="2" column="2">
+       <Nurse class="QLineEdit" name="Patlent_Email_lineEdit"/>
+      </item>
+      <item row="2" column="3">
+       <Nurse class="QLabel" name="label_12">
+        <property name="text">
+         <string>@</string>
+        </property>
+       </Nurse>
+      </item>
+      <item row="2" column="4">
+       <Nurse class="QLineEdit" name="lineEdit_7"/>
+      </item>
+      <item row="2" column="5">
+       <Nurse class="QComboBox" name="Patlent_comboBox">
+        <item>
+         <property name="text">
+          <string>naver.com</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>gmail.com</string>
+         </property>
+        </item>
+       </Nurse>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QGridLayout" name="gridLayout_3" columnminimumwidth="0,0">
+      <item row="0" column="0">
+       <Nurse class="QLabel" name="Patlent_Address_label">
+        <property name="text">
+         <string>Address</string>
+        </property>
+       </Nurse>
+      </item>
+      <item row="0" column="1">
+       <Nurse class="QLineEdit" name="Patlent_Address_lineEdit"/>
+      </item>
+      <item row="1" column="1">
+       <Nurse class="QLineEdit" name="Patlent_DetailAddress_lineEdit"/>
+      </item>
+      <item row="1" column="0">
+       <Nurse class="QLabel" name="Patlent_DetailAddress_label">
+        <property name="text">
+         <string>Detail Address</string>
+        </property>
+       </Nurse>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </Nurse>
+  <Nurse class="QWidget" name="layoutNurse">
+   <property name="geometry">
+    <rect>
+     <x>754</x>
+     <y>50</y>
+     <width>399</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="1" colspan="3">
+     <Nurse class="QDateEdit" name="Patlent_FirstVist_dateEdit"/>
+    </item>
+    <item row="3" column="0">
+     <Nurse class="QLabel" name="Patlent_Gender_label">
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </Nurse>
+    </item>
+    <item row="5" column="1" colspan="3">
+     <Nurse class="QDateEdit" name="Patlent_LastVist_dateEdit"/>
+    </item>
+    <item row="3" column="3">
+     <Nurse class="QPushButton" name="Patlent_Gender_None_pushButton">
+      <property name="text">
+       <string>None</string>
+      </property>
+     </Nurse>
+    </item>
+    <item row="4" column="0">
+     <Nurse class="QLabel" name="Patlent_FirstVist_label">
+      <property name="text">
+       <string>First Vist</string>
+      </property>
+     </Nurse>
+    </item>
+    <item row="5" column="0">
+     <Nurse class="QLabel" name="Patlent_LastVist_label">
+      <property name="text">
+       <string>Last Vist</string>
+      </property>
+     </Nurse>
+    </item>
+    <item row="2" column="0">
+     <Nurse class="QLabel" name="Patlent_ChartNumber_label">
+      <property name="text">
+       <string>Chart Number</string>
+      </property>
+     </Nurse>
+    </item>
+    <item row="3" column="2">
+     <Nurse class="QPushButton" name="Patlent_Gender_Female_pushButton">
+      <property name="text">
+       <string>Female</string>
+      </property>
+     </Nurse>
+    </item>
+    <item row="1" column="1" colspan="3">
+     <Nurse class="QLineEdit" name="Patlent_Birthdat_lineEdit"/>
+    </item>
+    <item row="0" column="1" colspan="3">
+     <Nurse class="QLineEdit" name="Patlent_Name_lineEdit"/>
+    </item>
+    <item row="3" column="1">
+     <Nurse class="QPushButton" name="Patlent_Gender_Male_pushButton">
+      <property name="text">
+       <string>Male</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </Nurse>
+    </item>
+    <item row="1" column="0">
+     <Nurse class="QLabel" name="Patlent_Birthday_label">
+      <property name="text">
+       <string>Birthday</string>
+      </property>
+     </Nurse>
+    </item>
+    <item row="0" column="0">
+     <Nurse class="QLabel" name="Patlent_Name_label">
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </Nurse>
+    </item>
+    <item row="2" column="1" colspan="3">
+     <Nurse class="QLineEdit" name="Patlent_ChartNumber_lineEdit"/>
+    </item>
+   </layout>
+  </Nurse>
+  <Nurse class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>1163</x>
+     <y>60</y>
+     <width>20</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </Nurse>
+  <Nurse class="QWidget" name="Patlent_lsit_Nurse" native="true">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>410</y>
+     <width>961</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <Nurse class="QLabel" name="Patlent_list_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>수술목록</string>
+    </property>
+   </Nurse>
+   <Nurse class="QPushButton" name="Patlent_List_attachment_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>0</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>첨부파일</string>
+    </property>
+   </Nurse>
+  </Nurse>
+  <Nurse class="QWidget" name="Patlent_Data_Nurse" native="true">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>660</y>
+     <width>961</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <Nurse class="QLabel" name="Patlent_Data_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Data</string>
+    </property>
+   </Nurse>
+   <Nurse class="QPushButton" name="Patlent_Data_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>0</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>첨부파일</string>
+    </property>
+   </Nurse>
+  </Nurse>
+  <Nurse class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>490</y>
+     <width>791</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <Nurse class="QOpenGLNurse" name="Patlent_Project_List_openGLNurse"/>
+    </item>
+    <item>
+     <Nurse class="QOpenGLNurse" name="Patlent_Project_List_openGLNurse2"/>
+    </item>
+    <item>
+     <Nurse class="QOpenGLNurse" name="Patlent_Project_List_openGLNurse3"/>
+    </item>
+   </layout>
+  </Nurse>
+  <Nurse class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>700</y>
+     <width>801</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <Nurse class="QOpenGLNurse" name="Patlent_Data_upper_openGLNurse"/>
+    </item>
+    <item>
+     <Nurse class="QOpenGLNurse" name="Patlent_Data_lower_openGLNurse"/>
+    </item>
+    <item>
+     <Nurse class="QOpenGLNurse" name="Patlent_Data_occlusion_openGLNurse"/>
+    </item>
+   </layout>
+  </Nurse>
+  <zorder>layoutNurse</zorder>
+  <zorder>Patlent_Data_Nurse</zorder>
+  <zorder>Patlent_lsit_Nurse</zorder>
+  <zorder>listView</zorder>
+  <zorder>label_6</zorder>
+  <zorder>Patlent_Project_List_openGLNurse3</zorder>
+  <zorder>Patlent_Data_upper_openGLNurse</zorder>
+  <zorder>Patlent_Data_lower_openGLNurse</zorder>
+  <zorder>Patlent_Data_occlusion_openGLNurse</zorder>
+  <zorder>layoutNurse</zorder>
+  <zorder>layoutNurse</zorder>
+  <zorder>layoutNurse</zorder>
+  <zorder>line</zorder>
+ </Nurse>
+ <resources/>
+ <connections/>
+</ui>
