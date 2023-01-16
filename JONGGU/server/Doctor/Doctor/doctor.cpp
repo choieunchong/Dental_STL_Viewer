@@ -31,16 +31,14 @@ Doctor::Doctor(QWidget *parent)
     connect(clientSocket, &QAbstractSocket::errorOccurred,
             [=]{ qDebug( ) << "error : "<< clientSocket->errorString( ); });                                 // 에러 발생 시 에러메세지
     connect(clientSocket, SIGNAL(readyRead( )), SLOT(receiveData( )));                          // 읽을 준비가 되면 receiveData 슬롯
-//    connect(clientSocket, SIGNAL(disconnected( )), SLOT(disconnect( )));                        // 연결 종료시 disconnect 슬롯
 
     fileClient = new QTcpSocket(this);
     fileClient->connectToHost("127.168.0.0",8001);
     fileClient->waitForConnected();
 
-
-//    connect(fileClient, SIGNAL(bytesWritten(qint64)), SLOT(goOnSend(qint64)));                  // 파일소켓에 데이터를 쓸 때 goOnSend 슬롯 발생
     connect(ui->fileButton, SIGNAL(clicked( )), SLOT(sendFile( )));                             // fileButton 누르면 sendFile 슬롯 발생
     connect(fileClient, SIGNAL(readyRead()), this, SLOT(readClient()));
+
     progressDialog = new QProgressDialog(0);                                                    // progressDialog 생성 후 0으로 초기화
     progressDialog->setAutoClose(true);                                                         // 파일전송이 끝나면 progressDialog 자동종료
     progressDialog->reset();
@@ -63,13 +61,13 @@ Doctor::~Doctor()
 
 void Doctor::loadDB()                   // 서버에서 환자 정보 받을 때
 {
-    // 서버에 환자 리스트 요청
     QByteArray dataArray;
     dataArray.clear();
     QDataStream out(&dataArray, QIODevice::WriteOnly);
 
     out << doctor << Request_Info;
     clientSocket->write(dataArray);
+
     clientSocket->flush();
 }
 
@@ -123,29 +121,30 @@ void Doctor::receiveData( )
     QByteArray bytearray = serverSocket->read(BLOCK_SIZE);
     From_Who fromWho;
     Patient_Info status;
-    QDataStream in(bytearray);
-    in >> fromWho >> status >> patientName >> patientChartNumber >> patientBirth >> patientFirstVisitDate >> patientLastVisitDate >> \
-           patientMobile >> patientPhone >> patientEmail >> patientAddress >> patientGender >> patientEmailDomain;
+    QDataStream in(&bytearray, QIODevice::ReadOnly);
 
-    qDebug() << "receiveData " << fromWho << status << patientName << patientChartNumber << patientBirth << patientFirstVisitDate << patientLastVisitDate << \
-           patientMobile << patientPhone << patientEmail << patientAddress << patientGender << patientEmailDomain;
+        in >> fromWho >> status >> patientName >> patientBirth >> patientFirstVisitDate >> patientLastVisitDate >> \
+               patientMobile >> patientPhone >> patientEmail >> patientAddress >> patientGender >> patientEmailDomain;
 
-    switch(status)
-    {
-    case Send_Info:
-        if (fromWho == server)
+        qDebug() << "receiveData " << fromWho << status << patientName << patientChartNumber << patientBirth << patientFirstVisitDate << patientLastVisitDate << \
+               patientMobile << patientPhone << patientEmail << patientAddress << patientGender << patientEmailDomain;
+
+        switch(status)
         {
-            QTreeWidgetItem *item = new QTreeWidgetItem(ui->patienttreeWidget);
-            item->setText(0,QString::number(patientChartNumber));
-            item->setText(1,patientName);
-            item->setText(2,patientGender);
-            item->setText(3,patientLastVisitDate);
-            ui->patienttreeWidget->addTopLevelItem(item);
+        case Send_Info:
+            if (fromWho == server)
+            {
+                QTreeWidgetItem *item = new QTreeWidgetItem(ui->patienttreeWidget);
+                item->setText(0,QString::number(patientChartNumber));
+                item->setText(1,patientName);
+                item->setText(2,patientGender);
+                item->setText(3,patientLastVisitDate);
+                ui->patienttreeWidget->addTopLevelItem(item);
+            }
+            break;
+        default:
+            break;
         }
-        break;
-    default:
-        break;
-    }
 }
 
 void Doctor::sendData()

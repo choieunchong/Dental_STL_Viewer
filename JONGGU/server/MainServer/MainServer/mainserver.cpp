@@ -157,12 +157,15 @@ void MainServer::receiveData()
             QSqlQuery query(db);
             query.exec(QString("select * from patient"));
             patientModel->select();
+
+
             qDebug() << "rowCount" <<patientModel->rowCount();
-            for(int i=0; i < patientModel->rowCount(); i++)
+            for(int i = 0; i < patientModel->rowCount(); i++)
             {
                 QByteArray dataArray;
                 dataArray.clear();
                 QDataStream out(&dataArray, QIODevice::WriteOnly);
+
                 patientName = patientModel->data(patientModel->index(i,0)).toString();
                 patientBirth = patientModel->data(patientModel->index(i,1)).toString();
                 patientChartNumber = patientModel->data(patientModel->index(i,2)).toInt();
