@@ -17,7 +17,6 @@
 #include <QSqlQueryModel>
 #include <QFileDialog>
 
-
 MainServer::MainServer(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MainServer), isSent(false)
@@ -60,6 +59,7 @@ MainServer::~MainServer()
         patientModel->submitAll();
         delete patientModel;
         db.close();
+        qDebug() << db <<"Db----------------------";
     }
 
     mainServer->close( );
@@ -123,7 +123,7 @@ void MainServer::receiveData()
     Patient_Info status;
     QDataStream in(&bytearray, QIODevice::ReadOnly);
     in >> fromWho >> status >> patientName >> patientChartNumber >> patientBirth >> patientFirstVisitDate >> patientLastVisitDate >> \
-           patientMobile >> patientPhone >> patientEmail >> patientAddress >> patientGender >> patientEmailDomain;
+           patientMobile >> patientPhone >> patientEmail >> patientAddress >> patientGender >> patientEmailDomain ;
 
     qDebug() << "receiveData " << fromWho << status << patientName << patientChartNumber << patientBirth << patientFirstVisitDate << patientLastVisitDate << \
            patientMobile << patientPhone << patientEmail << patientAddress << patientGender << patientEmailDomain;

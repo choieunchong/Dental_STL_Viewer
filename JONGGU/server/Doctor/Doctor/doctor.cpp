@@ -272,7 +272,9 @@ void Doctor::loadSTL()                   // 서버에서 환자 정보 받을 �
     QByteArray dataArray;
     dataArray.clear();
     QDataStream out(&dataArray, QIODevice::WriteOnly);
+
     out << qint64(0) << qint64(0) << "???" << Request_STL;
+    qDebug() << "dataArray" << dataArray;
     fileClient->write(dataArray);
     fileClient->flush();
 }
