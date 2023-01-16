@@ -3,6 +3,8 @@
 CustomInteractorStyle::CustomInteractorStyle()
 {
     LastPickedActor = NULL;
+    LastPickedActor1 = NULL;
+    LastPickedActor2 = NULL;
     LastPickedProperty = vtkProperty::New();
     id = 0;
     flag1 = 0;
@@ -34,26 +36,33 @@ void CustomInteractorStyle::OnLeftButtonDown()
     {
         if (flag1 == 0)
         {
-            this->LastPickedActor->GetProperty()->DeepCopy(hash[id - 1]->GetProperty());      
-            this->LastPickedActor->GetProperty()->SetColor(colors->GetColor3d("White").GetData());
+            this->LastPickedActor->GetProperty()->DeepCopy(this->LastPickedProperty);
             this->LastPickedActor->GetProperty()->EdgeVisibilityOff();
         }
         else
         {
-            this->LastPickedActor->GetProperty()->DeepCopy(hash[id - 1]->GetProperty());       // 라스트 픽 프로퍼티 값을 액터 값으로 설정
+            this->LastPickedProperty->DeepCopy(this->LastPickedActor->GetProperty());
+            this->LastPickedActor->GetProperty()->DeepCopy(this->LastPickedProperty);       // 라스트 픽 프로퍼티 값을 액터 값으로 설정
             this->LastPickedActor->GetProperty()->EdgeVisibilityOff();
+            flag1 = 0;
         }
     }
     this->LastPickedActor = picker->GetActor();                                         // 피커에서 액터 꺼내서 설정
     if (this->LastPickedActor)
     {
         this->LastPickedProperty->DeepCopy(this->LastPickedActor->GetProperty());       // 액터에서 프로퍼티 설정
+        this->LastPickedActor2 = this->LastPickedActor;
         this->LastPickedActor->GetProperty()->SetColor(colors->GetColor3d("Red").GetData());
         this->LastPickedActor->GetProperty()->SetDiffuse(1.0);
         this->LastPickedActor->GetProperty()->SetSpecular(0.0);
         this->LastPickedActor->GetProperty()->EdgeVisibilityOn();
-        hash[id] = this->LastPickedActor;
-        id++;
+        //hash[id] = this->LastPickedActor;
+        //id++;
+    }
+    else
+    {
+        this->LastPickedActor = this->LastPickedActor2;
+        this->LastPickedActor->GetProperty()->DeepCopy(this->LastPickedProperty);
     }
     vtkInteractorStyleTrackballCamera::OnLeftButtonDown();
 }
@@ -67,7 +76,6 @@ vtkActor* CustomInteractorStyle::OutputActor()
 {
     return this->LastPickedActor;
 }
-
 
 void CustomInteractorStyle::GetFlag(int flag)
 {

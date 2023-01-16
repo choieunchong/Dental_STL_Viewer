@@ -55,7 +55,10 @@ protected:
 
 private:
 	vtkActor* LastPickedActor;                                                  // 액터
+	vtkActor* LastPickedActor1;
+	vtkActor* LastPickedActor2;
 	vtkProperty* LastPickedProperty;                                            // 프로퍼티
+	vtkProperty* LastPickedProperty2;
 	QColor color1;
 	QHash<int, vtkActor*> hash;
 	int id;
