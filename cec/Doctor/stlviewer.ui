@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>STLViewer</class>
+ <widget class="QWidget" name="STLViewer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>617</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QOpenGLWidget" name="openGLWidget">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>139</y>
+     <width>501</width>
+     <height>321</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
