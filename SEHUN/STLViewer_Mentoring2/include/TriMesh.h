@@ -10,7 +10,7 @@ struct MeshTraits : public OpenMesh::DefaultTraits
 {
     typedef OpenMesh::Vec3d Point;
     typedef OpenMesh::Vec3d Normal;
-    typedef OpenMesh::Vec4f Color; // 0.0F ~ 1.0F RGB + Alpha (4D-Vector)
+    typedef OpenMesh::Vec4f Color;                          // 0.0F ~ 1.0F RGB + Alpha (4D-Vector)
 
     VertexAttributes(
         OpenMesh::Attributes::Status |

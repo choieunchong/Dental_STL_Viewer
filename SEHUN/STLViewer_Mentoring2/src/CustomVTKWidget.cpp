@@ -69,5 +69,5 @@ void CustomVTKWidget::AddSphere(vtkSmartPointer<vtkActor> sphere)
 
 void CustomVTKWidget::func(vtkSmartPointer<vtkActor> Actor)
 { 
-	AddActor(Actor);
+	AddActor(Actor);				// AddActor의 인자 때문에 mainWindow에도 액터가 전달되는 듯
 }

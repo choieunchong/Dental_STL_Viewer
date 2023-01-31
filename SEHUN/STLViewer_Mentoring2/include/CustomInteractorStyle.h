@@ -21,6 +21,12 @@
 #include <vtkTriangle.h>
 #include "observer.h"
 #include "TriMesh.h"
+#include <vtkDijkstraGraphGeodesicPath.h>
+#include <iostream>
+#include <vector>
+#include <queue>
+
+using namespace std;
 
 class CustomInteractorStyle : public vtkInteractorStyleTrackballCamera
 {
@@ -31,7 +37,7 @@ public:
 	void GetPolyData(vtkSmartPointer<vtkPolyData>);
 	void GetSphere(vtkSmartPointer<vtkSphereSource>);
 	void GetActor(vtkSmartPointer<vtkActor>);
-	
+	void dijkstra(int start);
 
 	void addObserver(Observer*);
 
@@ -51,6 +57,25 @@ private:
 	vtkSmartPointer<vtkPolyData> mPolyData;
 	vtkSmartPointer<vtkSphereSource> mSphere;
 	vtkSmartPointer<vtkActor> mActor;
-
+	int pickCount;
+	int overCount;
+	int lastSize;
+	int size;
+	int INF;
+	int start;
+	bool findLocation;
+	int location;
+	int dsize;
+	vector<pair<int, double>> vertexInfo[100000];
+	vector<int> node;
+	QHash<int, OpenMesh::Vec3d> overVector;
+	double distance;
+	double d[100000];
+	int parent[100000];
+	QHash<int, int> idHash;
+	QHash<int, OpenMesh::Vec3d> shortPointHash;
+	QHash<int, QHash<int, OpenMesh::Vec3d>> vertexHash;
+	QHash<int, int> nodeCount;
+	QHash<int, OpenMesh::Vec3d> outputHash;
 	Observer* mObserver;
 };
