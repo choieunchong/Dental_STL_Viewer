@@ -50,8 +50,19 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+<<<<<<< Updated upstream
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
+=======
+        mdiArea = new QMdiArea(centralwidget);
+        mdiArea->setObjectName(QString::fromUtf8("mdiArea"));
+        mdiArea->setEnabled(true);
+        mdiArea->setFocusPolicy(Qt::NoFocus);
+        mdiArea->setLayoutDirection(Qt::LeftToRight);
+        mdiArea->setActivationOrder(QMdiArea::CreationOrder);
+        mdiArea->setViewMode(QMdiArea::TabbedView);
+        mdiArea->setDocumentMode(true);
+>>>>>>> Stashed changes
 
         verticalLayout->addWidget(widget);
 

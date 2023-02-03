@@ -19,7 +19,7 @@ CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStri
 INCPATH       = -I..\Doctor -I. -IC:\Qt\5.15.2\msvc2019_64\include -IC:\Qt\5.15.2\msvc2019_64\include\QtWidgets -IC:\Qt\5.15.2\msvc2019_64\include\QtGui -IC:\Qt\5.15.2\msvc2019_64\include\QtANGLE -IC:\Qt\5.15.2\msvc2019_64\include\QtSql -IC:\Qt\5.15.2\msvc2019_64\include\QtNetwork -IC:\Qt\5.15.2\msvc2019_64\include\QtCore -Idebug -I. -I/include -IC:\Qt\5.15.2\msvc2019_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
-LIBS          = C:\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.lib C:\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.lib C:\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.lib C:\Qt\5.15.2\msvc2019_64\lib\Qt5Networkd.lib C:\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.lib  C:\Qt\5.15.2\msvc2019_64\lib\qtmaind.lib /LIBPATH:C:\openssl\lib /LIBPATH:C:\Utils\my_sql\mysql-5.7.25-winx64\lib /LIBPATH:C:\Utils\postgresql\pgsql\lib shell32.lib 
+LIBS          = opengl32.lib glu32.lib freeglut.lib /LIBPATH:C:\C\GLUT\GLUT\lib\x64 C:\Qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.lib C:\Qt\5.15.2\msvc2019_64\lib\Qt5Guid.lib C:\Qt\5.15.2\msvc2019_64\lib\Qt5Sqld.lib C:\Qt\5.15.2\msvc2019_64\lib\Qt5Networkd.lib C:\Qt\5.15.2\msvc2019_64\lib\Qt5Cored.lib  C:\Qt\5.15.2\msvc2019_64\lib\qtmaind.lib /LIBPATH:C:\openssl\lib /LIBPATH:C:\Utils\my_sql\mysql-5.7.25-winx64\lib /LIBPATH:C:\Utils\postgresql\pgsql\lib shell32.lib 
 QMAKE         = C:\Qt\5.15.2\msvc2019_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist

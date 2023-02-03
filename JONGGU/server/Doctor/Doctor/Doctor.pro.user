@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< Updated upstream:JONGGU/server/Doctor/Doctor/Doctor.pro.user
 <!-- Written by QtCreator 8.0.1, 2023-01-16T20:14:11. -->
+=======
+<!-- Written by QtCreator 9.0.1, 2023-01-31T19:03:19. -->
+>>>>>>> Stashed changes:cec/Doctor/Doctor/Doctor.pro.user
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -235,9 +239,14 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+<<<<<<< Updated upstream:JONGGU/server/Doctor/Doctor/Doctor.pro.user
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Doctor2</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/git/Dental_STL_Viewer/JONGGU/server/Doctor/Doctor/Doctor.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/git/Dental_STL_Viewer/JONGGU/server/Doctor/Doctor/Doctor.pro</value>
+=======
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Dental_STL_Viewer/cec/Doctor/Doctor/Doctor.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Dental_STL_Viewer/cec/Doctor/Doctor/Doctor.pro</value>
+>>>>>>> Stashed changes:cec/Doctor/Doctor/Doctor.pro.user
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
