@@ -44,8 +44,7 @@ Doctor::Doctor(QWidget* parent)
     fileClient->waitForConnected();
 
 
-    //connect(fileClient, SIGNAL(bytesWritten(qint64)), SLOT(goOnSend(qint64)));                  // 파일소켓에 데이터를 쓸 때 goOnSend 슬롯 발생
-    connect(ui->fileButton, SIGNAL(clicked()), SLOT(sendFile()));                             // fileButton 누르면 sendFile 슬롯 발생
+    //connect(fileClient, SIGNAL(bytesWritten(qint64)), SLOT(goOnSend(qint64)));                  // 파일소켓에 데이터를 쓸 때 goOnSend 슬롯 발생 
     connect(fileClient, SIGNAL(readyRead()), this, SLOT(readClient()));
     progressDialog = new QProgressDialog(0);                                                    // progressDialog 생성 후 0으로 초기화
     progressDialog->setAutoClose(true);                                                         // 파일전송이 끝나면 progressDialog 자동종료
@@ -81,7 +80,6 @@ Doctor::Doctor(QWidget* parent)
     mWindow->AddRenderer(mRenderer);
     ui->patientDataupperopenGLWidget->setRenderWindow(mWindow);
 
-    //connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(loadDB()));
 }
 
 Doctor::~Doctor()
@@ -147,34 +145,28 @@ void Doctor::closeEvent(QCloseEvent*)
 }
 
 void Doctor::receiveData()
-{  
+{
     QTcpSocket* serverSocket = (QTcpSocket*)sender();
     //QByteArray bytearray = serverSocket->read(BLOCK_SIZE); 
     QByteArray bytearray = serverSocket->readAll();
-    QString data = bytearray.toStdString().c_str(); 
+    QString data = bytearray.toStdString().c_str();
     int patientNum;
     QString patient;
     QString pInfo;
     int fromWho;
-    int status;
-    qDebug() << "sendData "<< data << endl;   
+    int status; 
     fromWho = data.split("/p/")[1].toInt();
     status = data.split("/p/")[2].toInt();
-    patientNum = data.split("/num/")[1].toInt(); 
+    patientNum = data.split("/num/")[1].toInt();
 
-    chartList.push_back(patient_stl_path.toInt());
-    
-
+    chartList.push_back(patient_stl_path.toInt());  
     switch (status)
     {
     case Send_Info:
         if (fromWho == server)
-        { 
             for (int i = 0; i < patientNum; i++)
             {
-                patient = data.split("/n/")[i];
-                qDebug() << "patient" << patient;
-                qDebug() << "pInfo" << patient.split("/c/")[10];
+                patient = data.split("/n/")[i]; 
                 patientName = patient.split("/c/")[0];
                 patientBirth = patient.split("/c/")[1];
                 patientChartNumber = patient.split("/c/")[2].toInt();
@@ -195,13 +187,12 @@ void Doctor::receiveData()
                 item->setText(2, patientGender);
                 item->setText(3, patientLastVisitDate);
                 ui->patienttreeWidget->addTopLevelItem(item);
-            } 
-        } 
-        bytearray.clear();
+            }
         break;
+        bytearray.clear();
     default:
         break;
-    } 
+    }  
 }
 
 int Doctor::makeChartNo()               // 차트 번호 만들기`
@@ -239,7 +230,7 @@ void Doctor::sendData()
     {
         patientEmailDomain = ui->Patient_comboBox->currentText();
     }
-    patientAddress = ui->patientAddresslineEdit->text() + "/addr/" + ui->patientDetailAddresslineEdit->text() + "/addr/";
+    patientAddress = ui->patientAddresslineEdit->text() + ui->patientDetailAddresslineEdit->text();
     patient_stl_path = QString("C:/Users/KOSA/Desktop/STL/%1.stl").arg(patientChartNumber);
     chartList.push_back(patient_stl_path.toInt());
     patientBirth = patientBirthY + "-" + patienBirthM + "-" + patienBirthD;
